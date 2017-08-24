@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: #2C5C5D;
+            height: 100vh;
+            /*-------------------BEGIN----------NAV BAR------------------------------*/
+            font-family: "Lato", sans-serif;
+            transition: background-color .5s;
+        }
+        
+        .sidenav {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #8EDDE4;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #09090A;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover,
+        .offcanvas a:focus {
+            color: #BB8246;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        #mySidenav {
+            height: 100%;
+        }
+        
+        #main {
+            height: 100%;
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <h1 style="text-align: center; color: #ff7575">
+            My Portfolio Website
+        </h1>
+       
+        
+        <p>
+          Welcome to my portfolio. I am a student at Southern Careers Institute, in this website I will be showcashing my developer skills. I used HTML5, CSS and JavaScript. I will be adding more as I learn. 
+          In this website you will see a side nav bar that will direct you to other pages on my website. If you do not leave the page and close the nav bar the background color will then change, this goes for all pages. I have added badges where you can follow or contact me through my social media pages. I have also linked my classmates portfolios, go ahead and visit their websites to see their skill
+          </p>
+       
+    </div>
+
+    <script>
+        $(function() { // jQuery goes in here...
+            // Detect clicks on "main" and toggle the navbar...
+            $("#main").click(function() {
+                // If nav is open, close it.
+                // If nav is already closed, do nothing...
+            });
+        });
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "#09090A";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "#DDC297";
+        } /*---------------END -----------------NAV BAR----------------------------- */
+    </script>
+</body>
+
+</html>
